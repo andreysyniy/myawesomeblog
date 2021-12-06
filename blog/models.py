@@ -10,3 +10,6 @@ class Post(models.Model):
 
   def get_summary(self):
     return ''.join(self.text[:70] + '...') if len(self.text) > 70 else self.text
+
+  def __str__(self):
+    return self.title
